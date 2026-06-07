@@ -1,0 +1,315 @@
+:root {
+    --primary-color: #2563eb;
+    --secondary-color: #1e293b;
+    --text-color: #334155;
+    --light-bg: #f8fafc;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--light-bg);
+    scroll-behavior: smooth;
+    padding-top: 70px; /* Compensación para que el contenido no quede oculto bajo el navbar fixed */
+}
+
+/* Navegación */
+#navbar {
+    background-color: rgba(30, 27, 75, 0.85); /* Armonizado con el footer (#1e1b4b) */
+    backdrop-filter: blur(10px); /* Efecto de difuminado (blush/glassmorphism) */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    padding: 0.8rem 0;
+    position: fixed; /* Cambiado de sticky a fixed */
+    top: 0;
+    left: 0;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    z-index: 1000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Sutil línea divisoria */
+}
+
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+#menu-container {
+    display: flex;
+    justify-content: center; /* Centra los elementos; cámbialo a space-between si activas el logo */
+    align-items: center;
+    width: 100%;
+}
+
+#links-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.link-item {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.link-item:hover {
+    color: var(--primary-color);
+}
+
+/* Encabezado */
+.titulo {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: var(--white);
+    color: var(--secondary-color);
+}
+
+/* Secciones Generales */
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+.subtitulo {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--secondary-color);
+    border-bottom: 3px solid var(--primary-color);
+    display: inline-block;
+}
+
+/* Grid de Tecnologías */
+.tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.tech-card {
+    background: var(--white);
+    padding: 1.2rem;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Sombra 5% más sólida */
+    transition: var(--transition);
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.tech-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+    border-color: var(--primary-color);
+}
+
+.tech-card img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.tech-card span {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--secondary-color);
+}
+
+/* Proyectos Grid */
+.project-grid-container { /* Aplicado al nuevo contenedor de proyectos */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 450px)); /* Ancho máximo para las columnas */
+    gap: 2rem;
+    justify-content: start; /* Alinea la cuadrícula al inicio (izquierda) */
+}
+
+/* Los hijos de .project-grid-container son las tarjetas de proyecto */
+.project-grid-container > div {
+    background: var(--white);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Sombra 5% más sólida */
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 4px;
+    margin-top: 1rem;
+}
+
+/* Formulario */
+#formulario {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1); /* Sombra 5% más sólida */
+}
+
+#formulario input, #formulario textarea {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button[type="submit"] {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: var(--transition);
+}
+
+button[type="submit"]:hover {
+    background-color: #1d4ed8;
+    transform: translateY(-2px);
+}
+
+/* Footer */
+footer {
+    background-color: #1e1b4b; /* Azul noche cálido / Deep Indigo */
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    margin-top: 4rem;
+}
+
+.social-section {
+    margin: 1.5rem 0;
+}
+
+.social-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 1rem;
+}
+
+.social-links img {
+    width: 32px;
+    height: 32px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    filter: grayscale(1) opacity(0.6); /* Color armonizado y suave en reposo */
+}
+
+.social-links a:hover img {
+    transform: translateY(-8px) scale(1.1);
+    filter: grayscale(0) opacity(1); /* Recupera su color original vibrante */
+}
+
+/* Botón disparador de correo */
+.btn-email-trigger {
+    background-color: #4f46e5; /* Color vivo y armonizado con el footer */
+    border: none;
+    color: var(--white);
+    padding: 0.7rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-left: 10px;
+    font-weight: 600;
+    box-shadow: 0 4px 15px rgba(79, 70, 229, 0.4);
+}
+.btn-email-trigger:hover {
+    background-color: #6366f1; /* Brillo extra en hover */
+    transform: translateY(-2px) scale(1.05);
+}
+
+/* Estilos del Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(15, 23, 42, 0.8); /* Fondo más oscuro y azulado */
+    backdrop-filter: blur(8px);
+    justify-content: center; /* Centrado horizontal */
+    align-items: center;    /* Centrado vertical */
+}
+
+.modal-content {
+    background-color: var(--white);
+    margin: 0;
+    padding: 2rem;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25); /* Sombra más profunda para el modal */
+}
+
+.close-btn {
+    position: absolute;
+    right: 1.5rem;
+    top: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.email-box {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: var(--light-bg);
+    border: 2px dashed var(--primary-color);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    border-radius: 8px;
+    word-break: break-all;
+}
+
+.copy-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: var(--transition);
+    margin-bottom: 1rem;
+}
+
+.copy-btn:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
+}
+
+.modal-note {
+    font-size: 0.8rem;
+    color: #64748b;
+    font-style: italic;
+}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <!-- SDK de EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <header>
+        <nav id="navbar">
+            <div id="wrapper">
+                <div id="menu-container">
+                    <!-- <div id="logo-container">
+                        <img id="logo" src="../../public/assets/oni.jpg" alt="Logo de Clobsdev" width="10%" height="10%">
+                    </div> -->
+                    <div id="links-container"> 
+                        <a class="link-item" href="#sobre_mi">Sobre Mi</a>
+                        <a class="link-item" href="#proyectos">Proyectos</a>
+                        <a class="link-item" href="#contactame">Contactame</a>
+                    </div>
+                </div>  
+            </div>
+        </nav>
+        <h1 class="titulo">Portfolio de: ClobsDev</h1>
+    </header>
+    <main>
+        <section id="sobre_mi">
+            <h2 class="subtitulo">Sobre Mi</h2>
+            <p>Soy Clobsdev, también conocido como Geyber Requena. Me dedico al desarrollo web y la creación de experienciass de usuario modernas. A continuación puedes ver las tecnologías que utilizo</p>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                    <span>HTML</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                    <span>CSS</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" alt="Next.js">
+                    <span>Next.js</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React">
+                    <span>React</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" alt="TypeScript">
+                    <span>TypeScript</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                    <span>Node.js</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind CSS">
+                    <span>Tailwind</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+                    <span>Git</span>
+                </div>
+                <div class="tech-card">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                    <span>GitHub</span>
+                </div>
+            </div>
+        </section>
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <div class="project-grid-container">
+                <div>
+                    <h3 class="titulo-proyecto">Reproductor Web</h3>
+                    <p class="descripcion-proyecto">Un reproductor de música web desarrollado con React y Tailwind CSS que permite al usuario reproducir cualquier video de YouTube de forma personalizada.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/LmZD-TU96q4?si=Lb_u53djgBxjAc-w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                    </iframe>
+                </div>
+                <div>
+                    <h3 class="titulo-proyecto">Sistema de Gestión de Inventario</h3>
+                    <p class="descripcion-proyecto">Un sistema de gestión de inventario desarrollado con React y Tailwind CSS que permite al usuario gestionar eficientemente el inventario de una empresa.</p>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/iM7gUJ75_8w?si=IETfGXa2_Ky1JAeo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+        <section id="contactame">
+            <form id="formulario">
+                <h2>Formulario de Contacto</h2>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>Enviame un correo: <button id="btn-reveal-email" class="btn-email-trigger">Ver correo de contacto</button></p>
+        <div class="social-section">
+            <p>Sígueme en redes sociales:</p>
+            <ul class="social-links">
+                <li>
+                    <a href="https://www.tiktok.com/@clobsdev" target="_blank" aria-label="TikTok">
+                        <img src="https://www.svgrepo.com/show/487139/brand-tiktok-sq.svg" alt="TikTok">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/clobsdev/" target="_blank" aria-label="Instagram">
+                        <img src="https://www.svgrepo.com/show/303145/instagram-2-1-logo.svg" alt="Instagram">
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/in/geyberrequena/" target="_blank" aria-label="LinkedIn">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p>&copy; 2026 Clobsdev Portfolio. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- Modal para el correo -->
+    <div id="email-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3>Contacto Directo</h3>
+            <p>Puedes escribirme a:</p>
+            <div id="email-display" class="email-box">
+                <!-- El correo se inyectará aquí -->
+            </div>
+            <button id="btn-copy-email" class="copy-btn">Copiar correo</button>
+        </div>
+    </div>
+
+    <script>
+        // Inicialización de EmailJS (Debes poner tu Public Key aquí)
+        (function() {
+            emailjs.init("wjSJAkeQROLCqVNy_"); 
+        })();
+
+        const modal = document.getElementById("email-modal");
+        const btn = document.getElementById("btn-reveal-email");
+        const btnCopy = document.getElementById("btn-copy-email");
+        const span = document.getElementsByClassName("close-btn")[0];
+        const display = document.getElementById("email-display");
+
+        // Elementos del formulario
+        const contactForm = document.getElementById("formulario");
+        const btnSubmit = contactForm.querySelector('button[type="submit"]');
+
+        // --- Lógica del Modal ---
+
+        btn.onclick = function() {
+            // Ofuscación simple: Construimos el correo al hacer clic
+            const user = "clobsdev";
+            const domain = "gmail.com";
+            const email = `${user}@${domain}`;
+            display.innerText = email;
+            modal.style.display = "flex";
+        }
+
+        btnCopy.onclick = function() {
+            navigator.clipboard.writeText(display.innerText).then(() => {
+                const originalText = btnCopy.innerText;
+                btnCopy.innerText = "¡Copiado!";
+                btnCopy.style.backgroundColor = "#10b981"; // Verde éxito
+                setTimeout(() => {
+                    btnCopy.innerText = originalText;
+                    btnCopy.style.backgroundColor = ""; // Vuelve al color original del CSS
+                }, 2000);
+            });
+        }
+
+        span.onclick = () => modal.style.display = "none";
+        window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; }
+
+        // --- Lógica de envío de correo ---
+
+        contactForm.onsubmit = function(event) {
+            event.preventDefault(); // Evita que la página se recargue
+            
+            btnSubmit.innerText = "Enviando...";
+            btnSubmit.disabled = true;
+
+            // Estos IDs los obtienes al crearte una cuenta en emailjs.com
+            const serviceID = 'default_service';
+            const templateID = 'template_er9oks5';
+
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    btnSubmit.innerText = "¡Enviado con éxito!";
+                    btnSubmit.style.backgroundColor = "#10b981";
+                    contactForm.reset(); // Limpia el formulario
+                    
+                    setTimeout(() => {
+                        btnSubmit.innerText = "Enviar";
+                        btnSubmit.style.backgroundColor = "";
+                        btnSubmit.disabled = false;
+                    }, 3000);
+                }, (err) => {
+                    btnSubmit.disabled = false;
+                    btnSubmit.innerText = "Error al enviar";
+                    btnSubmit.style.backgroundColor = "#ef4444";
+                    console.error("Error EmailJS:", err);
+                });
+        };
+    </script>
+</body>
+</html>
